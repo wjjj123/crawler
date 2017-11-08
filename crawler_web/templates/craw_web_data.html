@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爬虫结果</title>
+
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>Task_ID</th>
+            <th>crawl_domain</th>
+            <th>title</th>
+            <th>decode</th>
+            <th>date_time</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in data %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.Task_ID }}</td>
+                <td>{{ i.crawl_domain }}</td>
+                <td>{{ i.title }}</td>
+                <td>{{ i.decode }}</td>
+                <td>{{ i.date_time  }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
